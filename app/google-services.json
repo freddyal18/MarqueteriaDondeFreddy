@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "538841857322",
+    "firebase_url": "https://marqueteria-donde-freddy.firebaseio.com",
+    "project_id": "marqueteria-donde-freddy",
+    "storage_bucket": "marqueteria-donde-freddy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538841857322:android:5f05f05a4bbf853d863253",
+        "android_client_info": {
+          "package_name": "com.example.marqueteriadondefreddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538841857322-2jr9st83ejaisa9rs5qfj0u6kjtu09rb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marqueteriadondefreddy",
+            "certificate_hash": "9f9c2105a7bc172c56af0aa2a37913272c9f4ee0"
+          }
+        },
+        {
+          "client_id": "538841857322-en6guv0nlcl0lp8mghjkmtk4igrgfl3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpme7cOn2kuXaM3NQWUmtjNhkkW-SEHuA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538841857322-en6guv0nlcl0lp8mghjkmtk4igrgfl3g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
