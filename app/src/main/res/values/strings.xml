@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Marqueteria Donde Freddy</string>
     <string name="facebook_app_id">804755346628435</string> <string name="fb_login_protocol_scheme">fb804755346628435</string>
+    <string name="facebook_application_id" translatable="false">804755346628435</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb804755346628435</string>
+    <string name="twitter_consumer_key" translatable="false">TMgfdGlfno38gezpkNL63T3G7</string>
+    <string name="twitter_consumer_secret" translatable="false">KR0W74jcpkvjeraYUbUcrG5Jjwkd8ru6Mj2KDnYWKZxeF4yEgi</string>
     <string name="login_Cancelado">Ha cancelado el login</string>
     <string name="login_error">Ha ocurrido un error</string>
     <string name="no_log">No se pudo iniciar sesión</string>

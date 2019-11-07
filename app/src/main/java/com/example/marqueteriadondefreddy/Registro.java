@@ -3,6 +3,7 @@ package com.example.marqueteriadondefreddy;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +24,7 @@ import java.util.Map;
 
 public class Registro extends AppCompatActivity {
     private EditText nom, ape, cel, corr, con; //Variables para hacer uso de los EditText
-    private Button regi; //Variable para hacer uso del botón de registro
+    private Button regi, volver; //Variable para hacer uso del botón de registro
     FirebaseAuth firebaseAuth; //Variable para hacer uso de la autenticación
     FirebaseDatabase firebaseDatabase; //Variable para hacer uso de la base de datos
     FirebaseStorage firebaseStorage; //Variable para hacer uso de la base de datos
@@ -46,6 +47,13 @@ public class Registro extends AppCompatActivity {
         corr = findViewById(R.id.tx_corr);
         con = findViewById(R.id.tx_cont);
         regi = findViewById(R.id.btn_reg);
+        volver = findViewById(R.id.btn_volverDeReg);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         regi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +65,7 @@ public class Registro extends AppCompatActivity {
                 contra = con.getText().toString();
 
                 if(!nombre.isEmpty() && !apellido.isEmpty() && !celular.isEmpty() && !contra.isEmpty() && !correo.isEmpty()){
-                    if(contra.length() <=7){
+                    if(contra.length() >=7){
                         registrarUsuario();
                     }
                     else{
@@ -71,23 +79,25 @@ public class Registro extends AppCompatActivity {
         });
     }
     private void registrarUsuario (){
+        correo = corr.getText().toString().trim();
+        contra = con.getText().toString().trim();
         firebaseAuth.signInWithEmailAndPassword(correo, contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
 
                     Map<String, Object> map = new HashMap<>();
-                    map.put("Nombre", nombre);
-                    map.put("Apellidos", apellido);
-                    map.put("Celular", celular);
-                    map.put("Correo", correo);
-                    map.put("Contraseña", contra);
-                    String id = firebaseAuth.getCurrentUser().getUid();
-                    databaseReference.child("Usuarios").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    map.put("nombre", nombre);
+                    map.put("apellidos", apellido);
+                    map.put("celular", celular);
+                    map.put("correo", correo);
+                    map.put("contraseña", contra);
+                    String id = firebaseAuth.getUid();
+                    databaseReference.child("usuarios").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task1) {
                             if (task1.isSuccessful()){
-                                //Hacer intent
+                                finish();
                             }
                             else{
                                 Toast.makeText(Registro.this, "No se pudo almacenar los datos", Toast.LENGTH_SHORT).show();

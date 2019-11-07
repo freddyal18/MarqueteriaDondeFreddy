@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Recuperacion extends AppCompatActivity {
 
     private EditText correo;
-    private Button enviar;
+    private Button enviar, volver;
     private String email ="";
     private FirebaseAuth firebaseAuth;
     private ProgressDialog dia;
@@ -28,7 +28,9 @@ public class Recuperacion extends AppCompatActivity {
         setContentView(R.layout.activity_recuperacion);
         firebaseAuth =FirebaseAuth.getInstance();
         correo = findViewById(R.id.tx_recucor);
+        volver = findViewById(R.id.btn_volverDeRecu);
         dia = new ProgressDialog(this);
+        enviar = findViewById(R.id.btn_recuper);
         enviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,6 +44,12 @@ public class Recuperacion extends AppCompatActivity {
                 else{
                     Toast.makeText(Recuperacion.this, "Debe ingresar el correo", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
