@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_ver_servicios:
                 Intent intent2  = new Intent(MainActivity.this , Servicios.class);
                 startActivity(intent2);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new VerServiciosFragment()).commit();
+                /*getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new VerServiciosFragment()).commit();*/
                 break;
             case R.id.nav_agregar:
                 /*getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,

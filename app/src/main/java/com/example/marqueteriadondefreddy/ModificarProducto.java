@@ -30,6 +30,12 @@ public class ModificarProducto extends AppCompatActivity {
         descripcion = findViewById(R.id.txt_modi_des);
         guardar = findViewById(R.id.btn_guardar_modi);
         volver = findViewById(R.id.btn_volver_modi);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference databaseReference = firebaseDatabase.getReference("Producto");
         guardar.setOnClickListener(new View.OnClickListener() {

@@ -29,6 +29,12 @@ public class ModificarServicio extends AppCompatActivity {
         descripcion = findViewById(R.id.txt_modi_des1);
         guardar = findViewById(R.id.btn_guardar_modi1);
         volver = findViewById(R.id.btn_volver_modi1);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference databaseReference = firebaseDatabase.getReference("Servicio");
         guardar.setOnClickListener(new View.OnClickListener() {

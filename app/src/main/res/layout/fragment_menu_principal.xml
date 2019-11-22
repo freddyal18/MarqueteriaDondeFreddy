@@ -19,8 +19,27 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/txt_prin"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-40dp"
-        android:text="Descripción de la empresa"
+        android:layout_marginBottom="-80dp"
+        android:text="Retablos, Espejos biselados, oleos originales, materiales
+        para marqueteria, enmarcaciones, cuadros, hojillado, diplomas, bastidores."
         android:textColor="#0005A5"
         android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección: Carrera 17 # 67A 37"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginBottom="-120dp"
+        android:textColor="#0005A5"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacto: 3042482983 - 3112930304"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginBottom="-140dp"
+        android:textColor="#0005A5"
+        android:textSize="16sp"
+        />
 </RelativeLayout>
