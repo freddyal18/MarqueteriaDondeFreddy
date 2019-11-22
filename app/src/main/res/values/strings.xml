@@ -8,5 +8,7 @@
     <string name="login_Cancelado">Ha cancelado el login</string>
     <string name="login_error">Ha ocurrido un error</string>
     <string name="no_log">No se pudo iniciar sesión</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>

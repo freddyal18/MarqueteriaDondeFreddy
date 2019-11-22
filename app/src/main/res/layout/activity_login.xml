@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fondo"
     android:layout_height="match_parent"
     tools:context=".Login">
 
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="Marquetería Donde Freddy"
+        android:textSize="20sp"
+        android:textColor="#00047A"
         android:typeface="sans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -23,37 +26,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="72dp"
-        android:text="Celular"
+        android:layout_marginTop="40dp"
+        android:text="Correo"
+        android:textSize="16sp"
+        android:textColor="#0005A5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo" />
-
-    <EditText
-        android:id="@+id/tx_cel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
-        android:ems="10"
-        android:inputType="phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_celular" />
 
     <TextView
         android:id="@+id/id_contra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text="Contraseña"
+        android:textSize="16sp"
+        android:textColor="#0005A5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tx_cel" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_tx_correo" />
 
     <EditText
         android:id="@+id/tx_contra"
@@ -61,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginLeft="37dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="37dp"
         android:layout_marginRight="37dp"
         android:ems="10"
@@ -75,9 +65,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
         android:layout_marginTop="25dp"
         android:text="Registrarse"
+        android:textSize="16sp"
+        android:textColor="#1801B8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tx_contra" />
 
@@ -86,9 +77,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
         android:layout_marginTop="25dp"
         android:text="¿Olvidó su contraseña?"
+        android:textSize="16sp"
+        android:textColor="#1801B8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_registrarse" />
 
@@ -97,11 +89,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="25dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
+        android:backgroundTint="#8694EE"
         android:text="Iniciar sesión"
+        android:textColor="#1801B8"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_recu" />
@@ -112,8 +104,25 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
         android:text="Iniciar sesión de otro modo"
+        android:textColor="#1801B8"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_inicio" />
+
+    <EditText
+        android:id="@+id/btn_tx_correo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="37dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_celular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

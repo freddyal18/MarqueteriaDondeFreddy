@@ -5,12 +5,14 @@
 
     <dist:module dist:instant="true" />
 
-
-
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
-        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:name=".Home"
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -23,11 +25,11 @@
         <activity android:name=".AgregarServicio" />
         <activity android:name=".AgregarProducto" />
         <activity android:name=".Eliminar" />
-        <activity android:name=".Modificar" />
         <activity android:name=".Agregar" />
         <activity android:name=".Servicios" />
         <activity android:name=".Productos" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
         <activity android:name=".Recuperacion" />
         <activity android:name=".Registro" />
         <activity android:name=".Login">

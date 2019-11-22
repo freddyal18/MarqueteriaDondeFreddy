@@ -79,21 +79,18 @@ public class Registro extends AppCompatActivity {
         });
     }
     private void registrarUsuario (){
-        correo = corr.getText().toString().trim();
-        contra = con.getText().toString().trim();
-        firebaseAuth.signInWithEmailAndPassword(correo, contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(correo, contra).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-
                     Map<String, Object> map = new HashMap<>();
-                    map.put("nombre", nombre);
-                    map.put("apellidos", apellido);
-                    map.put("celular", celular);
-                    map.put("correo", correo);
-                    map.put("contraseña", contra);
-                    String id = firebaseAuth.getUid();
-                    databaseReference.child("usuarios").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    map.put("Nombre", nombre);
+                    map.put("Apellidos", apellido);
+                    map.put("Celular", celular);
+                    map.put("Correo", correo);
+                    map.put("Contraseña", contra);
+                    String id = firebaseAuth.getCurrentUser().getUid();
+                    databaseReference.child("Usuarios").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task1) {
                             if (task1.isSuccessful()){
@@ -104,9 +101,6 @@ public class Registro extends AppCompatActivity {
                             }
                         }
                     });
-                }
-                else{
-                    Toast.makeText(Registro.this, "No se ha podido registrar, intente más tarde", Toast.LENGTH_SHORT).show();
                 }
             }
         });

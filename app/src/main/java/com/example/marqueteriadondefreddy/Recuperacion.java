@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,6 +18,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Recuperacion extends AppCompatActivity {
 
+    private TextView a, b;
+    private Typeface script;
     private EditText correo;
     private Button enviar, volver;
     private String email ="";
@@ -27,6 +31,8 @@ public class Recuperacion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recuperacion);
         firebaseAuth =FirebaseAuth.getInstance();
+        a = findViewById(R.id.id_recuperacion);
+        b = findViewById(R.id.id_celula);
         correo = findViewById(R.id.tx_recucor);
         volver = findViewById(R.id.btn_volverDeRecu);
         dia = new ProgressDialog(this);
@@ -68,5 +74,9 @@ public class Recuperacion extends AppCompatActivity {
                 dia.dismiss();
             }
         });
+        String fuente = "fuentes/Gabriola.ttf";
+        this.script = Typeface.createFromAsset(getAssets(), fuente);
+        a.setTypeface(script);
+        b.setTypeface(script);
     }
 }
