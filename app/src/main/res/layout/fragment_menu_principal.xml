@@ -10,7 +10,16 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="Marqueteria Donde Freddy"
+        android:text="Marqueteria"
+        android:textColor="#00047A"
+        android:textSize="30sp" />
+    <TextView
+        android:id="@+id/txt_prin1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:text="Donde Freddy"
         android:textColor="#00047A"
         android:textSize="30sp" />
 
@@ -18,18 +27,94 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/txt_prin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-80dp"
-        android:text="Retablos, Espejos biselados, oleos originales, materiales
-        para marqueteria, enmarcaciones, cuadros, hojillado, diplomas, bastidores."
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-100dp"
+        android:text="Retablos"
         android:textColor="#0005A5"
         android:textSize="16sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-120dp"
+        android:text="Espejos biselados"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-140dp"
+        android:text="Oleos originales"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-160dp"
+        android:text="Materiales para marqueteria"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-180dp"
+        android:text="Enmarcaciones"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-200dp"
+        android:text="Cuadros"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-220dp"
+        android:text="Hojillado"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-240dp"
+        android:text="Diplomas"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-260dp"
+        android:text="Bastidores"
+        android:textColor="#0005A5"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Dirección: Carrera 17 # 67A 37"
         android:layout_alignBottom="@+id/txt_prin"
-        android:layout_marginBottom="-120dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-300dp"
         android:textColor="#0005A5"
         android:textSize="16sp"
         />
@@ -38,7 +123,18 @@
         android:layout_height="wrap_content"
         android:text="Contacto: 3042482983 - 3112930304"
         android:layout_alignBottom="@+id/txt_prin"
-        android:layout_marginBottom="-140dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-320dp"
+        android:textColor="#0005A5"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Correo: Marqueteria90@gmail.com"
+        android:layout_alignBottom="@+id/txt_prin"
+        android:layout_marginLeft="37dp"
+        android:layout_marginBottom="-340dp"
         android:textColor="#0005A5"
         android:textSize="16sp"
         />
